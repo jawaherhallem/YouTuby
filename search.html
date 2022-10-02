@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      body{
+        background-color: rgb(239, 239, 247);
+      }
+    </style>
+</head>
+<body class="mt-5" >
+    <div id="top-menu">
+        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(235, 40, 40) ;">
+          <a class="navbar-brand" href="index.html"><i class="fas fa-list"> Youtuby</i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-lg-auto">
+              <li class="nav-item active" tabindex="3">
+                <a class="nav-link" href="index.html">Suggested Videos</a>
+              </li>
+              <li class="nav-item" tabindex="4">
+                <a class="nav-link mr-lg-3" href="#">Recently Uploaded</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link pl-0" href="#" tabindex="1">Trending Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark text-white" href="#" data-toggle="modal" data-target="#loginModal" >Sign Up</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search">
+              <button class="btn btn-dark my-2 my-sm-0 " type="submit"><a href="search.html" style="color:white;">Search</a></button>
+            </form>
+          </div>
+        </nav>
+        </div>
+        </div>
+    
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+            <i class="fas fa-bars fa-lg" id="toggle"></i>
+            <b><a class="navbar-brand" href="index.html"> <i class="fas fa-play-circle"></i><span class="video-icon p-1"></span> Youtuby</a></b> -->
+
+
+    <div class="search-header pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4 ">
+             <span> About 800 resultat </span>
+            </div>
+            <div class="col-4">
+              <span> <i class="fas fa-filter"></i> Filtre</span>
+            </div>
+          </div>
+          <div class="col-2"></div>
+          <div class="row mt-4">
+            <div class="col-md-3 col-mg-3">
+                <div class="text-center"> <span>Download Date</span></div>
+                <hr>
+                <div class="col">
+                    <label >
+                        <input type="checkbox" name="checkBoxInputName">
+                        <span>Last Hour</span>
+                    </label>
+                    <br>
+                    <label >
+                        <input type="checkbox" name="checkBoxInputName">
+                        <span>Today</span>
+                    </label>
+                    <br>
+                    <label >
+                        <input type="checkbox" name="checkBoxInputName">
+                        <span>This Week</span>
+                    </label>
+                    <br>
+                    <label >
+                        <input type="checkbox" name="checkBoxInputName">
+                        <span> This Month</span>
+                    </label>
+                    <br>
+                    <label >
+                        <input type="checkbox" name="checkBoxInputName">
+                        <span>This year</span>
+                    </label>
+                 </div>
+            </div>
+            <div class="col-md-3 col-mg-3">
+                <div class="text-center"> <span>Type</span></div>
+                <hr>
+                <div class="col">
+                <label >
+                    <input type="checkbox" name="checkBoxInputName">
+                    <span>Video</span>
+                </label>
+                <br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName">
+                    <span>Channel</span>
+                </label>
+                <br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName">
+                    <span>Playlist</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName">
+                    <span> Movie</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName">
+                    <span>Show</span>
+                </label><br>
+                </div>
+            </div>
+            <div class="col-md-3 col-mg-3">
+                <div class="text-center"> <span>Sort by</span></div>
+                <hr>
+                <div class="col">
+                <label >
+                    <input type="checkbox" name="checkBoxInputName1" onclick="onlyOne(this)">
+                    <span>Relevancy</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName1" onclick="onlyOne(this)">
+                    <span>Download date</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName1" onclick="onlyOne(this)">
+                    <span>Views</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName1" onclick="onlyOne(this)">
+                    <span> Evaluation</span>
+                </label><br>
+                </div>
+            </div>
+            <div class="col-md-3 col-mg-3">
+                <div class="text-center"> <span>Duration</span></div>
+                <hr>
+                <div class="col">
+                <label >
+                    <input type="checkbox" name="checkBoxInputName" onclick="onlyOne(this)">
+                    <span>Short (less than 4 minutes)</span>
+                </label><br>
+                <label >
+                    <input type="checkbox" name="checkBoxInputName" onclick="onlyOne(this)">
+                    <span>long (more than 4 minutes)</span>
+                </label><br>
+            </div>
+            </div>
+        </div>
+      
+        </div>
+       </div>
+
+       <!-- col-md-3 col-mg-3 -->
+
+   
+    <div class="container">
+
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <!-- <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">  
+            width="296" height="166"
+            -->
+            <iframe class="card-img" src="https://www.youtube.com/embed/gm2RCfjXS3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/Pinguco2.jpg" class="card-img" alt="frontend">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/Pinguco1.png" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body bg-white mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/thumbnail/devtools.jpg" class="card-img" alt="devtools">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+      <script src="https://kit.fontawesome.com/5a65d2f9e3.js" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.6.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+
+    <script>
+      function onlyOne(checkbox) {
+
+    var checkboxes = document.getElementsByName('checkBoxInputName')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+    </script>
+</body>
+</html>

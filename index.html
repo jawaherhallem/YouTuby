@@ -6,139 +6,316 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTuby</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      body{
+        background-color: rgb(239, 239, 247);
+      }
+    </style>
 
 </head>
 <body>
 <div class="top-menu">
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="index.html">YouTuby</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: rgb(235, 40, 40);">
+      <div class="title">
+        
+      <a class="navbar-brand" href="index.html"><i class="fas fa-list"> Youtuby</i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
+    </div>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-lg-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"> Suggested video</a>
+          <li class="nav-item active" tabindex="3">
+            <a class="nav-link" href="index.html">Suggested Videos</a>
+          </li>
+          <li class="nav-item" tabindex="4">
+            <a class="nav-link mr-lg-3" href="#">Recently Uploaded</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link pl-0" href="#" tabindex="1">Trending Videos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Recently Uploaded</a>
+            <a class="nav-link btn btn-dark text-white" href="#" data-toggle="modal" data-target="#loginModal" >Sign Up</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Trending Videos</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign Up</a>
-
-          </li> -->
         </ul>
-        <form class="form-inline my-2 my-lg-0 ">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-dark my-2 my-sm-0 " type="submit"><a href="search.html" style="color: white;">Search</a></button>
         </form>
       </div>
     </nav>
+  </div>
+  </div>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" >
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="email" class="col-form-label">Email:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-form-label">Password:</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+      <a href="">Forgot your Password</a>
+      <a href="" class="mx-auto">Create an account</a>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+  </div>
 
-    
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+<div class="content pt-5">
+  <h4 class="py-5">Recently Uploaded</h4>
+  <div class="row">
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
         </div>
       </div>
     </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-lg-3">
+      <div class="card">
+        <img src="img/thumbnail/Pinguco1.png" class="card-img-top" alt="pingucoder">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <div class="card-footer">
+            <small class="text-muted">
+            <span><i class="fas fa-film"></i> </span>
+            <span> </span>
+            <span>9 days ago</span>
+          </small>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="Introduction">
-    <p>
-      Youtuby 
-    </p>
-</div>
-<div class="container" style="position: relative; margin-top: 300px;">
-  <div class="row">
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/html_1.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/html_2.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/css_1.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col mg-sm">
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/css_2.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/css_3.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/js_1.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col mg-sm">
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/js-2.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/js_3.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="./video/bootstap.mp4" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
 
- 
 
   
 
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+<script src="https://kit.fontawesome.com/5a65d2f9e3.js" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
